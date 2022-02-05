@@ -1,0 +1,8 @@
+.bg{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+    width: 30%;
+    border: solid 2px red;
+}
