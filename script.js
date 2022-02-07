@@ -10,8 +10,6 @@ const App = new Vue(
         axios.get('http://localhost:81/db-first/controller-api.php').then((result) => {
             this.cars = result.data.results;
             this.filtered = result.data.results;
-            console.log(this.cars);
-            console.log(this.filtered);
         }).catch((error) => { console.log(error); });
     },
     methods: {
@@ -21,9 +19,11 @@ const App = new Vue(
             } else {
                 this.cars = [];
                 this.filtered.forEach(element => {
-                    if(element.marca == this.text){
-                    this.cars.push(element)
+                    if((element.marca === this.text) && (element.versione === this.text)){
+                    this.cars.push(element);
+                    
                 }
+                
             });
         }
     },
